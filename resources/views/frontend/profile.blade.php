@@ -1,4 +1,4 @@
 @extends('layouts.app')
 @section('content')
-A ver
+<a href="{{ route('patients.index') }}">Ver pacientes</a>
 @endsection
