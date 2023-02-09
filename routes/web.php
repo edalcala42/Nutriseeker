@@ -38,6 +38,9 @@ Route::get('/login', function(){
 Route::get('profile/', [App\Http\Controllers\HomeController::class, 'profile'])->name('profile');
 
 Route::resource('/nutritionists','App\Http\Controllers\NutritionistController');
+Route::resource('/patients','App\Http\Controllers\PatientController');
+Route::post('/patients' , [App\Http\Controllers\PatientController::class, 'index'])->name('patients.index');
+Route::post('/patients' , [App\Http\Controllers\PatientController::class, 'store'])->name('patients.store');
 
 #Route::get('/mi_primer_ruta', function(){
 	#return view('nombre_de_la_vista');
